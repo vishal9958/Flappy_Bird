@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    position: relative;
+    text-align: center;
+    width: 90vw;
+    max-width: 800px;
+    height: 90vh;
+    max-height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Canvas */
+canvas {
+    display: none; /* Hidden until the game starts */
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-image: url('sky.jpg');
+    background-size: cover;
+}
+
+/* Start and Game Over Screens */
+#start-screen,
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+#start-btn,
+#restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+}
+
+#start-btn:hover,
+#restart-btn:hover {
+    background-color: #ffaa00;
+}
+
+/* Hide Game Over Screen Initially */
+#game-over-screen {
+    display: none;
+}
+
+/* Title */
+h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
