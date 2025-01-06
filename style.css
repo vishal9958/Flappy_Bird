@@ -13,26 +13,27 @@ body {
 #game-container {
     position: relative;
     text-align: center;
-    width: 90vw;
+    width: 90vw;  /* Set width to 90% of the viewport width */
     max-width: 800px;
-    height: 90vh;
+    height: 90vh;  /* Set height to 90% of the viewport height */
     max-height: 600px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin: 0 auto; /* Center the container */
 }
 
 /* Canvas */
 canvas {
-    display: none; /* Hidden until the game starts */
+    display: block;
     margin: 0 auto;
     width: 100%;
     height: 100%;
     background-image: url('sky.jpg');
     background-size: cover;
+    touch-action: manipulation; /* Disable default touch behavior */
 }
-
 /* Start and Game Over Screens */
 #start-screen,
 #game-over-screen {
