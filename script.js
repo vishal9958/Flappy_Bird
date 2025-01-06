@@ -132,3 +132,11 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Bird Movement on Screen Tap (for Mobile)
+document.addEventListener('touchstart', (e) => {
+    if (!isGameOver) {
+        bird.velocity = bird.lift;
+    }
+    e.preventDefault();  // Prevent default touch behavior like scrolling
+});
